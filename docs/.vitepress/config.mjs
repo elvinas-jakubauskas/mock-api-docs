@@ -6,6 +6,9 @@ export default defineConfig({
   description: "Elvinas Jakubauskas",
     themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+
+    
   
 
     sidebar: [
@@ -18,17 +21,23 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Using the Mock API',
+        collapsed: true,
+        items: [
+          { text: 'Getting payment information using the payment ID', link: '/api-docs/getting-payment-information-id.md' }
+        ]
+      },
+      {
         text: 'Mock API reference',
         collapsed: true,
         items: [
           { text: 'About the Mock API reference', link: '/api-docs/about-mock-api-reference' },
-          { text: 'Mock API reference', link: '/api/api-reference.md' },
+          { text: 'Mock API reference', link: '/api-reference/api-reference.md' },
         ]
       }
     ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+  },
+  markdown: {
+      lineNumbers: true,
+    },
 })

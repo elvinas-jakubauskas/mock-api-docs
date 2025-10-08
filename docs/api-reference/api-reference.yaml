@@ -1,9 +1,9 @@
-openapi: 3.1.0
+openapi: 3.0.1
 info:
-  title: Mock API
+  title: Mock API reference
   version: 1.0.0
   description: >
-    A sample API that allows users to work with payment transactions
+    The Mock API allows you to work with payment transactions.
 servers:
   - url: https://api.mocksoftware.com/v1
 paths:
@@ -40,6 +40,7 @@ paths:
       parameters:
       - name: paymentId
         in: path  
+        description: The ID of the payment transaction
         required: true
         schema:
           type: string
@@ -57,22 +58,35 @@ components:
     Payment:
       type: object
       properties:
-        id:
+        paymentId:
           type: string
+          description: The ID of the payment transaction
+          example: a17841
         amount:
           type: number
+          description: The transaction value
+          example: 10
         currency:
           type: string
+          description: The currency of the transaction
+          example: GBP
         status:
           type: string
           enum: [pending, completed, failed]
+          example: completed
     CreatePaymentRequest:
       type: object
       required: [amount, currency, recipientId]
       properties:
         amount:
           type: number
+          description: The transaction value
+          example: 10
         currency:
           type: string
+          description: The currency of the transaction
+          example: GBP
         recipientId:
           type: string
+          description: The ID of the recipient of the payment transaction
+          example: 170162d

@@ -8,7 +8,7 @@ This section describes the prerequisite steps you must complete before you can s
 
 You must do the following:
 
-1. [Install Postman](#downloading-postman)
+1. [Install Postman](#installing-postman)
 2. [Create an API key](#creating-an-api-key)
 
 ## Installing Postman
@@ -59,11 +59,12 @@ For authentication purposes, you must create an API key and use it when sending 
 **To create an API key:**
 
 1. In your web browser, go to https://www.mocksoftwareportal.com.
-2. On the dashboard, select **API keys**.
-3. On the **API keys** page, select **Create new API key**.
-4. In the **Create new API key** popup, do the following:   
-   - In **Nme**, enter a name for the API key.
+2. Sign in to the portal.
+3. On the dashboard, select **API keys**.
+4. On the **API keys** page, select **Create new API key**.
+5. In the **Create new API key** popup, do the following:   
+   - In **Name**, enter a name for the API key.
    - In **Expiry date**, select the expiry date of the API key.
    - In the **Permissions** section, select the permissions for the API key.
-5. Select **Create**   
+6. Select **Create**.   
 The API key is created.

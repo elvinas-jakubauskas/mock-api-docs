@@ -1,5 +1,12 @@
 # Mock API reference<sup>**1.0.0**</sup>
-A mock API that allows users to work with payment transactions
+
+The Mock API allows you to work with payment transactions.
+
+::: details Servers
+
+https://api.mocksoftware.com/v1
+
+:::
 
 ---
 
@@ -34,7 +41,7 @@ A mock API that allows users to work with payment transactions
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ------ |
-| paymentId | path |  | Yes | string |
+| paymentId | path | The ID of the payment transaction | Yes | string |
 
 #### Responses
 
@@ -50,15 +57,15 @@ A mock API that allows users to work with payment transactions
 
 | Name | Type | Description | Required | Example |
 | ---- | ---- | ----------- | -------- | -------
-| id | string |  | No | a17841 |
-| amount | number |  | No | 10 |
-| currency | string |  | No | GBP |
-| status | string, <br>**Available values:** "pending", "completed", "failed" | *Enum:* `"pending"`, `"completed"`, `"failed"` | No | `"completed"` |
+| paymentId | string | The ID of the payment transaction | No | a17841 |
+| amount | number | The transaction value | No | 10 |
+| currency | string | The currency of the transaction | No | GBP |
+| status | string | *Enum:* `"pending"`, `"completed"`, `"failed"` | No | `"completed"` |
 
 #### CreatePaymentRequest
 
 | Name | Type | Description | Required | Example |
 | ---- | ---- | ----------- | -------- | -------
-| amount | number |  | Yes | 10 |
-| currency | string |  | Yes | GBP |
-| recipientId | string |  | Yes | 170162d
+| amount | number | The transaction value | Yes | 10 |
+| currency | string | The currency of the transaction | Yes | GBP |
+| recipientId | string | The ID of the recipient of the payment transaction | Yes | 170162d

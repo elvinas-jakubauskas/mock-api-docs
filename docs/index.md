@@ -13,6 +13,6 @@ features:
     link: /api-docs/about-mock-api-docs.md
   - title: Mock API reference
     details: Explore the Mock API reference
-    link: /api/api-reference.md
+    link: /api-reference/api-reference.md
 ---
 
