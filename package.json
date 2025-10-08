@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "swagger-ui-dist": "^5.29.3",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-openapi": "^0.0.1-alpha.0",
+    "vue": "^3.5.22"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+  },
+  "devDependencies": {
+    "swagger-markdown": "^3.0.0",
+    "vitepress-openapi": "^0.1.9"
+  }
+}

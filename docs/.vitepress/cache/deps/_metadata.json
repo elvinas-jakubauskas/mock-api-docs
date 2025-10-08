@@ -1,0 +1,40 @@
+{
+  "hash": "57e61bb7",
+  "configHash": "d15d63fc",
+  "lockfileHash": "dae7ef81",
+  "browserHash": "e805b77c",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "84c40e4e",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "6710c0d5",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "1080692b",
+      "needsInterop": false
+    },
+    "swagger-ui-dist/swagger-ui-es-bundle": {
+      "src": "../../../../node_modules/swagger-ui-dist/swagger-ui-es-bundle.js",
+      "file": "swagger-ui-dist_swagger-ui-es-bundle.js",
+      "fileHash": "1c822941",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-QAXAIFA7": {
+      "file": "chunk-QAXAIFA7.js"
+    },
+    "chunk-TKZWA4SW": {
+      "file": "chunk-TKZWA4SW.js"
+    }
+  }
+}
