@@ -9,7 +9,11 @@ servers:
 paths:
   /payments:
     get:
+      tags:
+        - Payments
       summary: List all payments
+      description: Get a list of all payment transactions in the system.
+      operationId: getAllPayments
       responses:
         '200':
           description: List of payments
@@ -20,7 +24,11 @@ paths:
                 items:
                   $ref: '#/components/schemas/Payment'
     post:
+      tags:
+        - Payments
       summary: Create a new payment
+      description: Create a new payment transaction.
+      operationId: addPayment
       requestBody:
         required: true
         content:
@@ -36,7 +44,11 @@ paths:
                 $ref: '#/components/schemas/Payment'
   /payments/{paymentId}:
     get:
+      tags:
+        - Payments
       summary: Retrieve a specific payment using the payment ID
+      description: Retrieve a specific payment transaction using the payment ID.
+      operationId: findPaymentById
       parameters:
       - name: paymentId
         in: path  

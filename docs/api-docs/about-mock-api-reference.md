@@ -4,4 +4,4 @@ description: A topic introducing the Mock API reference
 
 # About the Mock API reference
 
-The [Mock API reference](/api-reference/api-reference.md) lists all the endpoints included in the API, request and response schemas, and describes how to send a request with each endpoint.
+The Mock API reference is grouped by resource, and lists all endpoints included in the API. To help you use the API, example values are provided where applicable.

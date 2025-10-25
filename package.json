@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "swagger-ui-dist": "^5.29.3",
     "vitepress": "^1.6.4",

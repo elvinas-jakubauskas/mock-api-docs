@@ -1,0 +1,150 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Mock API reference",
+    "version": "1.0.0",
+    "description": "The Mock API allows you to work with payment transactions."
+  },
+  "servers": [
+    {
+      "url": "https://api.mocksoftware.com/v1"
+    }
+  ],
+  "paths": {
+    "/payments": {
+      "get": {
+        "tags": ["Payments"],
+        "summary": "List all payments",
+        "description": "Get a list of all payment transactions in the system.",
+        "operationId": "getAllPayments",
+        "responses": {
+          "200": {
+            "description": "List of payments",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Payment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Payments"],
+        "summary": "Create a new payment",
+        "description": "Create a new payment transaction.",
+        "operationId": "addPayment",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Payment created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payment"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/payments/{paymentId}": {
+      "get": {
+        "tags": ["Payments"],
+        "summary": "Retrieve a specific payment transaction",
+        "description": "Retrieve a specific payment transaction using the payment ID.",
+        "operationId": "findPaymentById",
+        "parameters": [
+          {
+            "name": "paymentId",
+            "in": "path",
+            "description": "The ID of the payment transaction",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Payment details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payment"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Payment not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Payment": {
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "type": "string",
+            "description": "The ID of the payment transaction",
+            "example": "a17841"
+          },
+          "amount": {
+            "type": "number",
+            "description": "The transaction value",
+            "example": 10
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the transaction",
+            "example": "GBP"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "completed", "failed"],
+            "example": "completed"
+          }
+        }
+      },
+      "CreatePaymentRequest": {
+        "type": "object",
+        "required": ["amount", "currency", "recipientId"],
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "The transaction value",
+            "example": 10
+          },
+          "currency": {
+            "type": "string",
+            "description": "The currency of the transaction",
+            "example": "GBP"
+          },
+          "recipientId": {
+            "type": "string",
+            "description": "The ID of the recipient of the payment transaction",
+            "example": "170162d"
+          }
+        }
+      }
+    }
+  }
+}
